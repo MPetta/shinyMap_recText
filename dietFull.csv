@@ -1,0 +1,21 @@
+cuisine,ingredients,latitude,longitude,adult_obesity_rate,health_expenditures,education_expenditures,last_update
+brazilian,"['sugar', 'sweetened condensed milk', 'cachaca', 'garlic', 'lime']",-23.533773,-46.62529,22.1,8.3,5.8,1/1/20
+british,"['sugar', 'all-purpose flour', 'butter', 'unsalted butter', 'eggs']",51.509865000000005,-0.118092,27.8,9.1,6.2,1/1/20
+cajun_creole,"['olive oil', 'cajun seasoning', 'onions', 'butter', 'garlic']",29.951065000000003,-90.071533,30.0,17.1,5.4,1/1/20
+chinese,"['sugar', 'corn starch', 'sesame oil', 'soy sauce', 'garlic']",39.913818,116.363625,6.2,5.5,0.0,1/1/20
+filipino,"['sugar', 'carrots', 'onions', 'soy sauce', 'garlic']",16.566233,121.262634,6.4,4.7,2.7,1/1/20
+french,"['olive oil', 'sugar', 'butter', 'garlic', 'unsalted butter']",48.864715999999994,2.349014,21.6,11.5,5.9,1/1/20
+greek,"['olive oil', 'lemon juice', 'garlic', 'dried oregano', 'feta cheese']",37.98381,23.727539,24.9,8.1,4.1,1/1/20
+indian,"['cumin', 'onions', 'garam masala', 'vegetable oil', 'garlic']",25.794033,78.11653100000001,3.9,4.7,3.2,1/1/20
+irish,"['sugar', 'all-purpose flour', 'potatoes', 'butter', 'eggs']",53.35014,-6.266155,25.3,7.8,6.4,1/1/20
+italian,"['parmesan cheese', 'olive oil', 'basil', 'onions', 'garlic']",42.504154,12.646361,19.9,9.2,4.5,1/1/20
+jamaican,"['olive oil', 'ground allspice', 'lime juice', 'onions', 'garlic']",18.476223,-77.89389,24.7,5.4,6.1,1/1/20
+japanese,"['mirin', 'sugar', 'rice vinegar', 'sake', 'soy sauce']",35.652832000000004,139.839478,4.3,10.2,3.8,1/1/20
+korean,"['sugar', 'sesame oil', 'soy sauce', 'garlic', 'green onions']",37.5326,127.024612,4.7,7.4,5.0,1/1/20
+mexican,"['salsa', 'cumin', 'onions', 'garlic', 'sour cream']",19.432608,-99.133209,28.9,6.3,5.1,1/1/20
+moroccan,"['olive oil', 'cumin', 'onions', 'garlic', 'ground cinnamon']",33.589886,-7.603869,26.1,5.9,5.4,1/1/20
+russian,"['sugar', 'onions', 'butter', 'sour cream', 'eggs']",55.75124399999999,37.618423,23.1,7.1,4.1,1/1/20
+southern_us,"['large eggs', 'sugar', 'all-purpose flour', 'vanilla extract', 'butter']",33.247875,-83.441162,64.8,17.1,5.4,1/1/20
+spanish,"['olive oil', 'sugar', 'onions', 'garlic', 'red bell pepper']",40.416775,-3.70379,23.8,9.0,5.0,1/1/20
+thai,"['coconut milk', 'vegetable oil', 'soy sauce', 'garlic', 'fish sauce']",13.736717,100.523186,10.0,6.5,5.8,1/1/20
+vietnamese,"['sugar', 'carrots', 'soy sauce', 'garlic', 'fish sauce']",10.762622,106.660172,2.1,7.1,6.3,1/1/20
