@@ -1,4 +1,4 @@
-#load libraries
+# load libraries
 library(shiny)
 library(shinythemes)
 library(leaflet)
@@ -6,15 +6,15 @@ library(dplyr)
 library(leaflet.extras)
 library(RColorBrewer)
 
-#import data
+# import data
 data <- read.csv("dietFull.csv")
 data$cuisine <- as.factor(data$cuisine)   
 
-#categorize earthquake depth
+# categorize
 data$ob_level <- ifelse(data$adult_obesity_rate <= 10, "Low", 
                         ifelse(data$adult_obesity_rate <= 20 | data$adult_obesity_rate > 10, "Medium", 
                                ifelse(data$adult_obesity_rate > 20, "High", "other")))
-
+# initiate format
 ui <- bootstrapPage(
     tags$head(tags$style(type = "text/css", "html, body {width:100%;height:100%}",
                HTML('#sidebar {opacity : .65}', '#sidebar1 {opacity : .65}'))),
@@ -53,16 +53,16 @@ ui <- bootstrapPage(
     )
 )
 
-# Define server logic required to draw map
+# define server logic required to draw map
 server <- function(input, output, session) {
     
-    #define the color pallate for the magnitidue of the earthquake
+    # define the color pallate for the magnitidue of the earthquake
     pal <- colorNumeric(
         palette = c('darkorchid1', 'darkorchid4', 'dark orange', 'orange red', 'red', 'dark red'),
         domain = data$adult_obesity_rate
     )
     
-    #define the color of for the depth of the earquakes
+    # define the color of for the depth of the earquakes
     pal2 <- colorFactor(
         palette = c('darkorchid1', 'dark orange', 'dark red'),
         domain = data$ob_level
@@ -84,7 +84,7 @@ server <- function(input, output, session) {
                 names.arg=c("Brazil", "Britian", "USA Cajun", "China", "Filipino", "French", "Greek", "Indian", "Irish", "Italian", "Jamaica", "Japan", "Korea", "Mexico", "Morocco", "Russia", "USA South", "Spanish", "Thai", "Vietnam"),
                 las = 2) })
     
-    #create the map
+    # create the map
     output$mymap <- renderLeaflet({
         leaflet(data) %>% 
             setView(lng = 95, lat = 21, zoom = 2.4)  %>% #setting the view over ~ center of North America
@@ -93,7 +93,7 @@ server <- function(input, output, session) {
             addProviderTiles(providers$CartoDB.PositronNoLabels)
     })
     
-    #next we use the observe function to make the checkboxes dynamic. If you leave this part out you will see that the checkboxes, when clicked on the first time, display our filters...But if you then uncheck them they stay on. So we need to tell the server to update the map when the checkboxes are unchecked.
+    # make the checkboxes dynamic
     observe({
         proxy <- leafletProxy("mymap", data = data)
         proxy %>% clearMarkers()
@@ -124,5 +124,5 @@ server <- function(input, output, session) {
     
 }
 
-# Run the application 
+# run the application 
 shinyApp(ui = ui, server = server)
